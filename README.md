@@ -2,6 +2,10 @@
 
 แอป menu bar บน macOS สำหรับหา dev server ที่ยังถือ port ค้างอยู่แล้วฆ่าทิ้งด้วยคลิกเดียว — node, bun, pnpm, yarn, python และอะไรก็ตามที่คุณเปิดเอง
 
+<p align="center">
+  <img src="docs/demo.png" alt="รายการ dev server ที่ถือ port อยู่ พร้อมปุ่ม Kill ต่อแถว" width="428">
+</p>
+
 ## ติดตั้ง
 
 ยังไม่มีไฟล์สำเร็จรูปแจก ต้อง build เองซึ่งใช้เวลาไม่ถึงนาที
@@ -77,6 +81,8 @@ swift run PortMe --version
 SwiftPM ล้วน ไม่มี external dependency — อ่าน process กับ socket ตรงจาก libproc ไม่ได้เรียก `lsof`
 
 `swift test` เขียนภาพตัวอย่างรายการไว้ที่ `.build/preview/dev-server-list.png` ไว้ตรวจหน้าตาโดยไม่ต้องเปิดแอป
+
+รูปใน README สร้างใหม่ได้ด้วย `dist/PortMe.app/Contents/MacOS/PortMe --demo-shot docs/demo.png` — ต้องรันจาก `.app` เพราะเลขเวอร์ชันกับสถานะ login item อ่านจาก bundle ภาพวาดจาก view จริงของแอปด้วยข้อมูลตัวอย่างคงที่ จึงไม่หลุดจาก UI จริงเวลาแก้โค้ด
 
 ## สิทธิ์ที่แอปขอ
 
